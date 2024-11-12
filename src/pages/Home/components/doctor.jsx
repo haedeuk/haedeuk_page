@@ -49,7 +49,7 @@ export default function Doctor() {
             </ul>
           </div>
           <div className={styles.doc__img}>
-            <img style={{ height: '90%' }} src={Doctor2} alt="doc" />
+            <img src={Doctor2} alt="doc" />
           </div>
           <div className={styles.doc__name}>
             <span className={styles['doc__name--name']}>{DOCTOR_INFO.second.name}</span>
