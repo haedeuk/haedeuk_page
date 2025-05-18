@@ -1,8 +1,11 @@
 import Doctor1 from 'assets/image/doctor/doctor1.png';
 import DOCTOR_INFO from 'constants/doctor_career';
 import styles from '../Home.module.scss';
+import useMediaQuery from 'utils/hooks/useMediaQuery';
 
 export default function Doctor() {
+  const {isMobile} = useMediaQuery()
+
   return (
     <div className={styles.doc}>
       <span className={styles.doc__title}>의료진 소개</span>
@@ -12,17 +15,26 @@ export default function Doctor() {
           <div className={styles.doc__wrap}>
             <div className={styles.doc__career}>
               <div className={styles['doc__career--top']}>
-                <span className={styles['doc__career--name']}>
+                {isMobile
+                  ? doctor.rank === '대표원장' &&
+                  (
+                    <div className={styles.doc__img}>
+                      <img src={Doctor1} alt="chief" />
+                    </div>
+                  )
+                  : (
+                    <div className={styles.doc__img}>
+                      {doctor.rank === '대표원장' &&
+                        <img src={Doctor1} alt="chief" />
+                      }
+                    </div>
+                  )}
+                <div className={styles['doc__career--name']}>
                   {doctor.name}
-                  {' '}
                   <span className={styles['doc__career--rank']}>
                     {doctor.rank}
                   </span>
-                </span>
-                {doctor.rank === '대표원장' &&
-                  <div className={styles.doc__img}>
-                    <img src={Doctor1} alt="chief" />
-                  </div>}
+                </div>
               </div>
               <ul className={styles['doc__career--ul']}>
                 {doctor.career.map((data) =>

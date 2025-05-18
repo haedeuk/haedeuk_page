@@ -201,7 +201,6 @@
     flex-direction: column;
     align-items: center;
     padding: 30px 0;
-    border-top: 1px solid #666666;
     box-sizing: border-box;
 
     &:last-child {
@@ -211,6 +210,7 @@
     @include media.media-breakpoint-down(mobile) {
       width: 100%;
       margin: 5px 0;
+      border-top: 1px solid #666666;
     }
   }
 
@@ -232,18 +232,27 @@
 
     &--top {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
       white-space: nowrap;
       gap: 5px;
+
+      @include media.media-breakpoint-down(mobile) {
+        flex-direction: column-reverse;
+        gap: 10px;
+      }
     }
 
     &--name {
-      font-size: 4rem;
+      display: flex;
+      align-items: baseline;
+      flex-direction: column;
+      font-size: 3.6rem;
       font-weight: 700;
 
       @include media.media-breakpoint-down(mobile) {
+        flex-direction: row;
         font-size: 3rem;
       }
     }
@@ -251,7 +260,6 @@
     &--rank {
       font-size: 3.4rem;
       font-weight: 400;
-      margin-right: 5px;
 
       @include media.media-breakpoint-down(mobile) {
         font-size: 2.4rem;
@@ -259,13 +267,18 @@
     }
 
     &--ul {
-      width: auto;
+      flex: 1 0;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       white-space: pre-wrap;
       word-break: keep-all;
       list-style: none;
+      border-top: 1px solid #666666;
+
+      @include media.media-breakpoint-down(mobile) {
+        border-top: none;
+      }
     }
 
     &--list {
@@ -284,15 +297,27 @@
   }
 
   &__img {
-    width: 100%;
-    height: 300px;
+    width: 375px;
+    height: auto;
     display: flex;
+    flex-shrink: 0;
     align-items: flex-end;
     justify-content: center;
+    overflow: hidden;
 
     img {
       object-fit: cover;
-      height: 100%;
+      width: 100%;
+
+      @include media.media-breakpoint-down(mobile) {
+        width: auto;
+        height: 100%;
+      }
+    }
+
+    @include media.media-breakpoint-down(mobile) {
+      width: 100%;
+      height: 400px;
     }
   }
 
