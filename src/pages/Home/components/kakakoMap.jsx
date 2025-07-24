@@ -1,5 +1,5 @@
 import { Map, MapMarker } from 'react-kakao-maps-sdk';
-import Main from 'assets/image/marker.png';
+import Main from 'assets/image/marker/marker.png';
 import useMediaQuery from 'utils/hooks/useMediaQuery';
 
 export default function KakaoMap() {
