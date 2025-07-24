@@ -3,6 +3,8 @@ import Home from 'pages/Home';
 import images from 'utils/js/images';
 import { useLayoutEffect } from 'react';
 import { Analytics } from '@vercel/analytics/react';
+import Cost from 'pages/Cost';
+import DefaultLayout from 'Layout/DefaultLayout';
 
 function App() {
   const preloadImages = (imageUrls: string | any[]) => {
@@ -18,8 +20,12 @@ function App() {
   return (
     <>
     <Analytics />
-    <Routes>
-      <Route path="/" element={<Home />} />
+      <Routes>
+        <Route element={<DefaultLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/cost" element={<Cost />} />
+          
+        </Route>
     </Routes>
     </>
   );

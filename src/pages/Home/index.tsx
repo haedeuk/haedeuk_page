@@ -2,8 +2,6 @@
 import { ReactComponent as Call } from 'assets/svg/call.svg';
 import { ReactComponent as Location } from 'assets/svg/location.svg';
 import { ReactComponent as Reservation } from 'assets/svg/reservation.svg';
-import LogoRow from 'assets/image/logo_row_gold_white.png';
-import LogoRowMobile from 'assets/image/logo_row_gold.png';
 import useMediaQuery from 'utils/hooks/useMediaQuery';
 import Time from './components/time';
 import KakaoMap from './components/kakakoMap';
@@ -22,10 +20,6 @@ export default function Home() {
     <div className={styles.template}>
       <div className={styles.content}>
         <div className={styles.banner}>
-          <div className={styles.banner__wrap}>
-            <img className={!isMobile ? styles.banner__logo : styles.disabled} src={LogoRow} alt="logo" />
-            <img className={isMobile ? styles.banner__logo : styles.disabled} src={LogoRowMobile} alt="logo" />
-          </div>
           <div className={styles.banner__main}>
             체계적인 진료
             {'\n'}
@@ -62,40 +56,7 @@ export default function Home() {
             오시는길
           </span>
           <KakaoMap />
-        </div>
-
-        <div className={styles.footer}>
-          <div className={styles.footer__info}>
-            <span className={styles['footer__info--title']}>
-              @해득금천한의원
-            </span>
-            <span>
-              주소: 서울시 금천구 금하로 631, 2층,3층(시흥동)
-            </span>
-            <span>
-              <span className={styles['footer__info--phone']}>
-                전화번호: 02-6952-3988
-                {'\n'}
-              </span>
-              사업자 등록번호 : 568-90-01753
-              <span className={styles['footer__info--ceo']}>
-                대표: 김혜인
-              </span>
-            </span>
-            <span>
-              COPYRIGHT @ 2023 HaeDeukGeumCheon.
-              {' '}
-              ALL RIGHTS RESERVED
-            </span>
-          </div>
-          <div className={styles.footer__phone}>
-            <Call />
-            02-6952-3988
-          </div>
-          <div className={styles.footer__logo}>
-            <img src={LogoRow} alt="logo" />
-          </div>
-        </div>
+        </div>      
 
         <div className={styles.sideMenu}>
           <a
