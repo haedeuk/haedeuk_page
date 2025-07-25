@@ -10,11 +10,13 @@
 }
 
 .title {
-  font-size: 30px;
-  font-weight: bold;
   margin-bottom: 20px;
   letter-spacing: 2px;
   color: #845e00;
+  white-space: pre-wrap;
+  text-align: center;
+
+  @include font.B-(30);
 }
 
 .table {

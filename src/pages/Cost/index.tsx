@@ -4,7 +4,7 @@ import styles from './Cost.module.scss';
 export default function Cost() {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>{new Date().getFullYear()}년 비급여 진료비용 고지</h1>
+      <h1 className={styles.title}>{`${new Date().getFullYear()}년\n비급여 진료비용 고지`}</h1>
 
       <table className={styles.table}>
         <thead>
