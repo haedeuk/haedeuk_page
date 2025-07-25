@@ -16,7 +16,7 @@ export default function Cost() {
         </thead>
         <tbody>
           {COST_LIST.map((cost) => (
-            <tr>
+            <tr key={cost.name}>
               <td>{cost.category}</td>
               <td>{cost.name}</td>
               <td>{cost.price}원</td>

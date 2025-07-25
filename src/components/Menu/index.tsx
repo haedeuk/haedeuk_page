@@ -31,6 +31,7 @@ export default function Menu({ isOpen, onClose }: MenuProps) {
                   className={styles.menu__item}
                   to={'/cost'}
                   key={'cost'}
+                  onClick={onClose}
                 >
                   비급여항목
                 </Link>
