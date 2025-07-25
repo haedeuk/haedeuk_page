@@ -1,36 +1,26 @@
 import { useState } from 'react';
-import { Link, Outlet, useLocation } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import LogoRow from '@/assets/image/logo_row_gold_glare.png';
 import LogoRowWhite from '@/assets/image/logo_row_gold_white.png';
 import CallIcon from '@/assets/svg/call.svg';
 import MenuIcon from '@/assets/svg/menu.svg';
-import Menu from '@/components/Menu';
-import useMediaQuery from '@/hooks/useMediaQuery';
+import SideMenu from '@/components/Menu';
 import useScrollDirection from '@/hooks/useScrollDirection';
 import styles from './Layout.module.scss';
 
 export default function DefaultLayout() {
-  const { isMobile } = useMediaQuery();
-  const { pathname } = useLocation();
   const direction = useScrollDirection();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className={styles.layout}>
-      {isOpen && <Menu isOpen={isOpen} onClose={() => setIsOpen(false)} />}
+      {isOpen && <SideMenu isOpen={isOpen} onClose={() => setIsOpen(false)} />}
       <div className={`${styles.header} ${direction === 'down' ? styles.hidden : ''}`}>
         <Link className={styles.logo} to={'/'}>
           <img src={LogoRow} alt="logo" />
         </Link>
         <div className={styles.menu}>
-          {isMobile
-            ? (<MenuIcon className={styles.menu__icon} onClick={() => setIsOpen(true)} />)
-            : (
-              <Link className={`${styles.menu__item} ${pathname === '/cost' ? styles['menu__item--active'] : ''}`} to={'/cost'}>
-                비급여항목
-              </Link>
-            )
-          }
+          <MenuIcon className={styles.menu__icon} onClick={() => setIsOpen(true)} />
         </div>
       </div>
       <Outlet />

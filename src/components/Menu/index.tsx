@@ -2,15 +2,21 @@ import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import LogoIcon from '@/assets/image/logo_row_gold_glare.png';
 import CloseIcon from '@/assets/svg/close.svg';
+import useOnClickOutside from '@/hooks/useClickOutside';
 import styles from './Menu.module.scss';
 
 interface MenuProps {
   isOpen: boolean;
   onClose: () => void;
 }
-export default function Menu({ isOpen, onClose }: MenuProps) {
+export default function SideMenu({ isOpen, onClose }: MenuProps) {
   const [show, setShow] = useState(isOpen);
   const contentRef = useRef<HTMLDivElement>(null);
+
+  useOnClickOutside(contentRef, () => {
+    setShow(false);
+    setTimeout(() => { onClose(); }, 200);
+  });
 
   return (
     <div className={styles.template}>

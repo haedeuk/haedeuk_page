@@ -14,6 +14,7 @@
   gap: 30px;
 
   @include media.mobile {
+    height: 60px;
     padding: 0 20px;
   }
 }
@@ -24,9 +25,14 @@
   align-items: center;
 
   &__icon {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
+
+    @include media.mobile {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   &__item {

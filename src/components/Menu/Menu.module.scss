@@ -18,6 +18,10 @@
   display: flex;
   justify-content: flex-start;
   z-index: 1000;
+
+  @include media.pc {
+    justify-content: flex-end;
+  }
 }
 
 .wrapper {
@@ -43,13 +47,17 @@
 
 .content {
   position: relative;
-  width: 85%;
+  width: 400px;
   height: 100%;
   align-self: flex-end;
   display: flex;
   flex-direction: column;
   overflow: auto;
   background-color: var(--white);
+
+  @include media.mobile {
+    width: 85%;
+  }
 }
 
 .info {
