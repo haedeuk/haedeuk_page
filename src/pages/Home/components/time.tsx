@@ -1,4 +1,4 @@
-import { ReactComponent as Phone } from 'assets/svg/phone.svg';
+import PhoneIcon from '@/assets/svg/phone.svg';
 import styles from '../Home.module.scss';
 
 export default function Time() {
@@ -12,7 +12,7 @@ export default function Time() {
         {' '}
         2층,3층 (시흥동)
         <a className={styles['time__left--phone']} href="tel:02-6952-3988">
-          <Phone />
+          <PhoneIcon />
           02-6952-3988
         </a>
       </div>

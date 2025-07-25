@@ -1,5 +1,5 @@
 import {
-  Dispatch, SetStateAction, useCallback, useState,
+  type Dispatch, type SetStateAction, useCallback, useState,
 } from 'react';
 
 type ReturnType = [boolean, () => void, () => void, () => void, Dispatch<SetStateAction<boolean>>];

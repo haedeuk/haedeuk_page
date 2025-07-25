@@ -37,6 +37,10 @@
 
   td {
     font-size: 16px;
+
+    @include media.mobile {
+      font-size: 12px;
+    }
   }
 
   tr:nth-child(even) {

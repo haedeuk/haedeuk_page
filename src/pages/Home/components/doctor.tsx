@@ -1,10 +1,10 @@
-import Doctor1 from 'assets/image/doctor/doctor1.png';
-import DOCTOR_INFO from 'constants/doctor_career';
+import Doctor1 from '@/assets/image/doctor/doctor1.png';
+import DOCTOR_INFO from '@/constants/doctor_career';
+import useMediaQuery from '@/hooks/useMediaQuery';
 import styles from '../Home.module.scss';
-import useMediaQuery from 'utils/hooks/useMediaQuery';
 
 export default function Doctor() {
-  const {isMobile} = useMediaQuery()
+  const { isMobile } = useMediaQuery();
 
   return (
     <div className={styles.doc}>
@@ -12,7 +12,7 @@ export default function Doctor() {
 
       <div className={styles.doc__list}>
         {DOCTOR_INFO.map((doctor) => (
-          <div className={styles.doc__wrap}>
+          <div className={styles.doc__wrap} key={doctor.name}>
             <div className={styles.doc__career}>
               <div className={styles['doc__career--top']}>
                 {isMobile

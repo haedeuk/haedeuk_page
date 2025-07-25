@@ -1,45 +1,22 @@
-@use "sass:map";
+// 스크롤바 너비 14px 추가
+$pc: 1396px;
+$tablet: 1395px;
+$mobile: 900px;
 
-$media: (
-  mobile: 900px
-);
-
-/*
-  by Bootstrap
-  https://github.com/twbs/bootstrap/blob/main/scss/mixins/_breakpoints.scss
-*/
-@mixin media-breakpoint-up($name, $breakpoints: $media) {
-  $min: breakpoint-min($name, $breakpoints);
-
-  @if $min {
-    @media (min-width: $min) {
-      @content;
-    }
-  } @else {
+@mixin pc {
+  @media (min-width: $pc) {
     @content;
   }
 }
 
-@mixin media-breakpoint-down($name, $breakpoints: $media) {
-  $max: breakpoint-max($name, $breakpoints);
-
-  @if $max {
-    @media (max-width: $max) {
-      @content;
-    }
-  } @else {
+@mixin tablet {
+  @media (max-width: $tablet) {
     @content;
   }
 }
 
-@function breakpoint-min($name, $breakpoints: $media) {
-  $min: map.get($breakpoints, $name);
-
-  @return if($min != 0, $min, null);
-}
-
-@function breakpoint-max($name, $breakpoints: $media) {
-  $max: map.get($breakpoints, $name);
-
-  @return if($max and $max > 0, $max - 0.02, null);
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
 }

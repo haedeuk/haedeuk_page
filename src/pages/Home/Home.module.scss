@@ -1,5 +1,3 @@
-@use "src/utils/styles/mediaQuery" as media;
-
 .template {
   width: 100%;
   height: 100%;
@@ -19,8 +17,8 @@
   position: relative;
   width: 100%;
   height: 85vh;
-  background-color: rgba(0, 0, 0, 50%);
-  background-image: url("../../assets/image/main.jpg");
+  background-color: rgb(0, 0, 0, 50%);
+  background-image: url("/src/assets/image/main.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -40,7 +38,7 @@
     left: 80px;
     padding: 5px;
 
-    @include media.media-breakpoint-down(mobile) {
+    @include media.mobile {
       width: 100%;
       top: 0;
       left: 50%;
@@ -52,7 +50,7 @@
   &__logo {
     width: 350px;
 
-    @include media.media-breakpoint-down(mobile) {
+    @include media.mobile {
       width: 80%;
     }
   }
@@ -64,7 +62,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 50%);
+    background-color: rgb(0, 0, 0, 50%);
   }
 
   &__main {
@@ -75,7 +73,7 @@
     white-space: pre-wrap;
     margin-bottom: 30px;
 
-    @include media.media-breakpoint-down(mobile) {
+    @include media.mobile {
       font-size: 40px;
     }
   }
@@ -87,7 +85,7 @@
     text-align: center;
     white-space: pre-wrap;
 
-    @include media.media-breakpoint-down(mobile) {
+    @include media.mobile {
       font-size: 16px;
     }
   }
@@ -111,7 +109,7 @@
       font-weight: 700;
       margin-bottom: 20px;
 
-      @include media.media-breakpoint-down(mobile) {
+      @include media.mobile {
         font-size: 40px;
       }
     }
@@ -122,7 +120,7 @@
       text-align: center;
       line-height: 36px;
 
-      @include media.media-breakpoint-down(mobile) {
+      @include media.mobile {
         white-space: pre-wrap;
         font-size: 18px;
       }
@@ -135,7 +133,7 @@
     justify-content: space-around;
     align-items: center;
 
-    @include media.media-breakpoint-down(mobile) {
+    @include media.mobile {
       width: 100%;
     }
 
@@ -150,12 +148,12 @@
       background-color: #222222;
       font-size: 40px;
       color: #ffffff;
-      font-weight: 900;
+      font-weight: 700;
       white-space: pre-wrap;
       text-align: center;
       margin: 20px 40px;
 
-      @include media.media-breakpoint-down(mobile) {
+      @include media.mobile {
         width: 31vw;
         height: 31vw;
         font-size: 18px;
@@ -207,7 +205,7 @@
       border-bottom: 1px solid #666666;
     }
 
-    @include media.media-breakpoint-down(mobile) {
+    @include media.mobile {
       width: 100%;
       margin: 5px 0;
       border-top: 1px solid #666666;
@@ -220,13 +218,13 @@
     display: flex;
     white-space: pre-wrap;
     color: #222222;
-    font-size: 2rem;
+    font-size: 20rem;
     transition: 0.4s;
     padding: 0 10px;
     gap: 30px;
     box-sizing: border-box;
 
-    @include media.media-breakpoint-down(mobile) {
+    @include media.mobile {
       flex-direction: column;
     }
 
@@ -238,7 +236,7 @@
       white-space: nowrap;
       gap: 5px;
 
-      @include media.media-breakpoint-down(mobile) {
+      @include media.mobile {
         flex-direction: column-reverse;
         gap: 10px;
       }
@@ -248,21 +246,21 @@
       display: flex;
       align-items: baseline;
       flex-direction: column;
-      font-size: 3.6rem;
+      font-size: 36rem;
       font-weight: 700;
 
-      @include media.media-breakpoint-down(mobile) {
+      @include media.mobile {
         flex-direction: row;
-        font-size: 3rem;
+        font-size: 30rem;
       }
     }
 
     &--rank {
-      font-size: 3.4rem;
+      font-size: 34rem;
       font-weight: 400;
 
-      @include media.media-breakpoint-down(mobile) {
-        font-size: 2.4rem;
+      @include media.mobile {
+        font-size: 24rem;
       }
     }
 
@@ -276,7 +274,7 @@
       list-style: none;
       border-top: 1px solid #666666;
 
-      @include media.media-breakpoint-down(mobile) {
+      @include media.mobile {
         border-top: none;
       }
     }
@@ -290,7 +288,7 @@
         font-weight: 700;
       }
 
-      @include media.media-breakpoint-down(mobile) {
+      @include media.mobile {
         font-size: 1.7rem;
       }
     }
@@ -309,13 +307,13 @@
       object-fit: cover;
       width: 100%;
 
-      @include media.media-breakpoint-down(mobile) {
+      @include media.mobile {
         width: auto;
         height: 100%;
       }
     }
 
-    @include media.media-breakpoint-down(mobile) {
+    @include media.mobile {
       width: 100%;
       height: 400px;
     }
@@ -349,10 +347,10 @@
   align-items: center;
   flex-direction: column;
   font-size: 40px;
-  font-weight: 900;
+  font-weight: 700;
   margin: 100px;
 
-  @include media.media-breakpoint-down(mobile) {
+  @include media.mobile {
     font-size: 30px;
   }
 
@@ -360,7 +358,7 @@
     font-size: 50px;
     color: #995b09;
 
-    @include media.media-breakpoint-down(mobile) {
+    @include media.mobile {
       font-size: 40px;
     }
   }
@@ -370,7 +368,7 @@
   width: 60vw;
   margin: 30px;
 
-  @include media.media-breakpoint-down(mobile) {
+  @include media.mobile {
     width: 100%;
   }
 
@@ -379,7 +377,7 @@
     object-fit: scale-down;
     margin: 0 auto;
 
-    @include media.media-breakpoint-down(mobile) {
+    @include media.mobile {
       width: 100%;
       height: 300px;
     }
@@ -399,7 +397,7 @@
     font-weight: 700;
     margin-bottom: 30px;
 
-    @include media.media-breakpoint-down(mobile) {
+    @include media.mobile {
       font-size: 35px;
     }
   }
@@ -411,7 +409,7 @@
     width: 50%;
     margin: 50px 0 30px;
 
-    @include media.media-breakpoint-down(mobile) {
+    @include media.mobile {
       width: 100%;
     }
 
@@ -421,7 +419,7 @@
       margin: 20px;
       text-align: center;
 
-      @include media.media-breakpoint-down(mobile) {
+      @include media.mobile {
         white-space: pre-wrap;
       }
     }
@@ -435,14 +433,14 @@
       padding: 40px 0;
       margin: 0 5px;
 
-      @include media.media-breakpoint-down(mobile) {
+      @include media.mobile {
         font-size: 20px;
       }
 
       span {
         white-space: normal;
 
-        @include media.media-breakpoint-down(mobile) {
+        @include media.mobile {
           white-space: pre-wrap;
         }
       }
@@ -459,7 +457,7 @@
   height: 60vh;
   margin-bottom: 200px;
 
-  @include media.media-breakpoint-down(mobile) {
+  @include media.mobile {
     flex-direction: column;
     height: 80vh;
   }
@@ -468,8 +466,8 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url("../../assets/image/treat.png");
-    background-color: rgba(0 0 0 / 50%);
+    background: url("/src/assets/image/treat.png");
+    background-color: rgb(0 0 0 / 50%);
     background-size: cover;
     background-position: center;
     background-blend-mode: multiply;
@@ -494,7 +492,7 @@
       border-radius: 20px;
       font-size: 25px;
 
-      @include media.media-breakpoint-down(mobile) {
+      @include media.mobile {
         font-size: 20px;
       }
     }
@@ -502,7 +500,7 @@
     &--time {
       font-weight: 500;
 
-      @include media.media-breakpoint-down(mobile) {
+      @include media.mobile {
         font-size: 15px;
       }
     }
@@ -519,7 +517,7 @@
     font-size: 30px;
     margin: 20px;
 
-    @include media.media-breakpoint-down(mobile) {
+    @include media.mobile {
       white-space: pre-wrap;
       font-size: 20px;
     }
@@ -529,7 +527,7 @@
       font-weight: 700;
       margin-bottom: 10px;
 
-      @include media.media-breakpoint-down(mobile) {
+      @include media.mobile {
         font-size: 40px;
       }
     }
@@ -545,7 +543,7 @@
       text-decoration: none;
       font-size: 40px;
 
-      @include media.media-breakpoint-down(mobile) {
+      @include media.mobile {
         font-size: 30px;
       }
     }
@@ -565,7 +563,7 @@
   width: 100%;
   margin-bottom: 50px;
 
-  @include media.media-breakpoint-down(mobile) {
+  @include media.mobile {
     flex-direction: column;
   }
 
@@ -573,7 +571,7 @@
     display: flex;
     align-items: center;
 
-    @include media.media-breakpoint-down(mobile) {
+    @include media.mobile {
       width: 100%;
       justify-content: center;
     }
@@ -584,7 +582,7 @@
       justify-content: center;
       width: 300px;
       height: 300px;
-      background-color: rgba(0 0 0 / 50%);
+      background-color: rgb(0 0 0 / 50%);
       background-position: center;
       background-blend-mode: multiply;
       background-size: cover;
@@ -593,8 +591,9 @@
       font-weight: 700;
       color: #ffffff;
       margin: 0 10px;
+      background-image: url("/src/assets/image/treatment/chuna.png");
 
-      @include media.media-breakpoint-down(mobile) {
+      @include media.mobile {
         width: 50vw;
         height: 50vw;
         border-radius: 0;
@@ -602,7 +601,6 @@
         border: 1px solid #ffffff;
         border-collapse: collapse;
       }
-      background-image: url("../../assets/image/treatment/chuna.png");
     }
 
     &--t2 {
@@ -611,7 +609,7 @@
       justify-content: center;
       width: 300px;
       height: 300px;
-      background-color: rgba(0 0 0 / 50%);
+      background-color: rgb(0 0 0 / 50%);
       background-position: center;
       background-blend-mode: multiply;
       background-size: cover;
@@ -620,8 +618,9 @@
       font-weight: 700;
       color: #ffffff;
       margin: 0 10px;
+      background-image: url("/src/assets/image/treatment/medicine.png");
 
-      @include media.media-breakpoint-down(mobile) {
+      @include media.mobile {
         width: 50vw;
         height: 50vw;
         border-radius: 0;
@@ -629,7 +628,6 @@
         border: 1px solid #ffffff;
         border-collapse: collapse;
       }
-      background-image: url("../../assets/image/treatment/medicine.png");
     }
 
     &--t3 {
@@ -638,7 +636,7 @@
       justify-content: center;
       width: 300px;
       height: 300px;
-      background-color: rgba(0 0 0 / 50%);
+      background-color: rgb(0 0 0 / 50%);
       background-position: center;
       background-blend-mode: multiply;
       background-size: cover;
@@ -647,8 +645,9 @@
       font-weight: 700;
       color: #ffffff;
       margin: 0 10px;
+      background-image: url("/src/assets/image/treatment/car.png");
 
-      @include media.media-breakpoint-down(mobile) {
+      @include media.mobile {
         width: 50vw;
         height: 50vw;
         border-radius: 0;
@@ -656,7 +655,6 @@
         border: 1px solid #ffffff;
         border-collapse: collapse;
       }
-      background-image: url("../../assets/image/treatment/car.png");
     }
 
     &--t4 {
@@ -665,7 +663,7 @@
       justify-content: center;
       width: 300px;
       height: 300px;
-      background-color: rgba(0 0 0 / 50%);
+      background-color: rgb(0 0 0 / 50%);
       background-position: center;
       background-blend-mode: multiply;
       background-size: cover;
@@ -674,8 +672,9 @@
       font-weight: 700;
       color: #ffffff;
       margin: 0 10px;
+      background-image: url("/src/assets/image/treatment/treat.png");
 
-      @include media.media-breakpoint-down(mobile) {
+      @include media.mobile {
         width: 50vw;
         height: 50vw;
         border-radius: 0;
@@ -683,7 +682,6 @@
         border: 1px solid #ffffff;
         border-collapse: collapse;
       }
-      background-image: url("../../assets/image/treatment/treat.png");
     }
   }
 }
@@ -698,7 +696,7 @@
   right: 20px;
   z-index: 999;
 
-  @include media.media-breakpoint-down(mobile) {
+  @include media.mobile {
     top: 80%;
   }
 
@@ -760,7 +758,7 @@
     color: #333333;
   }
 
-  @include media.media-breakpoint-down(mobile) {
+  @include media.mobile {
     font-size: 40px;
     height: 300px;
   }
@@ -786,7 +784,7 @@
     color: #333333;
   }
 
-  @include media.media-breakpoint-down(mobile) {
+  @include media.mobile {
     font-size: 40px;
     height: 300px;
   }

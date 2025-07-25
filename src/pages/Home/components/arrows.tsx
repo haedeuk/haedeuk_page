@@ -1,8 +1,10 @@
 import styles from '../Home.module.scss';
 
-export function NextArrow(props) {
-  // eslint-disable-next-line react/prop-types
-  const { onClick } = props;
+interface ArrowProps {
+  onClick?: () => void;
+}
+
+export function NextArrow({ onClick }: ArrowProps) {
   return (
     <button
       className={styles.next}
@@ -14,9 +16,7 @@ export function NextArrow(props) {
   );
 }
 
-export function PrevArrow(props) {
-  // eslint-disable-next-line react/prop-types
-  const { onClick } = props;
+export function PrevArrow({ onClick }: ArrowProps) {
   return (
     <button
       className={styles.prev}

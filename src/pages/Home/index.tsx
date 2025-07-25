@@ -1,17 +1,14 @@
-/* eslint-disable react/no-unescaped-entities */
-import { ReactComponent as Call } from 'assets/svg/call.svg';
-import { ReactComponent as Location } from 'assets/svg/location.svg';
-import { ReactComponent as Reservation } from 'assets/svg/reservation.svg';
-import useMediaQuery from 'utils/hooks/useMediaQuery';
-import Time from './components/time';
-import KakaoMap from './components/kakakoMap';
-import styles from './Home.module.scss';
-import Doctor from './components/doctor';
-import SlideShow from './components/slideShow';
-import Introduce from './components/introduce';
 
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import Call from '@/assets/svg/call.svg';
+import Location from '@/assets/svg/location.svg';
+import Reservation from '@/assets/svg/reservation.svg';
+import useMediaQuery from '@/hooks/useMediaQuery';
+import Doctor from './components/doctor';
+import Introduce from './components/introduce';
+import KakaoMap from './components/kakakoMap';
+import SlideShow from './components/slideShow';
+import Time from './components/time';
+import styles from './Home.module.scss';
 
 export default function Home() {
   const { isMobile } = useMediaQuery();
@@ -56,7 +53,7 @@ export default function Home() {
             오시는길
           </span>
           <KakaoMap />
-        </div>      
+        </div>
 
         <div className={styles.sideMenu}>
           <a

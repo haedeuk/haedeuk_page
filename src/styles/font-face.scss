@@ -1,0 +1,18 @@
+@use "sass:string";
+
+@mixin font-face($font-name, $src, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $font-name;
+    src: url($src);
+    font-style: $style;
+    font-weight: $weight;
+    font-display: swap;
+  }
+}
+
+@include font-face("Pretendard", "/fonts/Pretendard/Pretendard-Regular.woff2", 400);
+@include font-face("Pretendard", "/fonts/Pretendard/Pretendard-Medium.woff2", 500);
+@include font-face("Pretendard", "/fonts/Pretendard/Pretendard-SemiBold.woff2", 600);
+@include font-face("Pretendard", "/fonts/Pretendard/Pretendard-Bold.woff2", 700);
+@include font-face("Pretendard", "/fonts/Pretendard/Pretendard-ExtraBold.woff2", 800);
+@include font-face("Pretendard", "/fonts/Pretendard/Pretendard-Black.woff2", 900);

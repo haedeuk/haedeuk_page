@@ -1,27 +1,28 @@
-import Lobby from 'assets/image/slider/lobby.png';
-import Admission1 from 'assets/image/slider/admission.png';
-import Doc1 from 'assets/image/slider/doc1.png';
-import Stair from 'assets/image/slider/stair.png';
-import Doc2 from 'assets/image/slider/doc2.png';
-import Admission2 from 'assets/image/slider/admission2.png';
-import Admission3 from 'assets/image/slider/admission3.png';
-import Treat1 from 'assets/image/slider/treat1.png';
 import Slider from 'react-slick';
+import Admission1 from '@/assets/image/slider/admission.png';
+import Admission2 from '@/assets/image/slider/admission2.png';
+import Admission3 from '@/assets/image/slider/admission3.png';
+import Doc1 from '@/assets/image/slider/doc1.png';
+import Doc2 from '@/assets/image/slider/doc2.png';
+import Lobby from '@/assets/image/slider/lobby.png';
+import Stair from '@/assets/image/slider/stair.png';
+import Treat1 from '@/assets/image/slider/treat1.png';
 import styles from '../Home.module.scss';
 import { NextArrow, PrevArrow } from './arrows';
+import type { Settings } from 'react-slick';
 
 export default function SlideShow() {
-  const settings = {
+  const settings: Settings = {
     dots: true,
     infinite: true,
     autoplay: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     speed: 1000,
-    lazyLoad: 'anticipated',
     autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
+    lazyLoad: 'anticipated',
   };
 
   return (

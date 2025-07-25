@@ -1,0 +1,49 @@
+@use "/src/utils/styles/mediaQuery.scss" as media;
+@use "sass:math";
+
+@mixin font($weight, $size) {
+  font-weight: $weight;
+  font-size: $size;
+}
+
+// 반응형 폰트 mixin
+// nesting 규칙에 의해 폰트는 항상 코드의 가장 마지막에 위치해야 한다.
+
+@mixin B-($i) {
+  font-weight: 700;
+  font-size: #{$i}rem;
+
+  @include media.tablet {
+    font-size: #{math.round($i * 0.9)}px;
+  }
+
+  @include media.mobile {
+    font-size: #{math.round($i * 0.8)}px;
+  }
+}
+
+@mixin Semi-($i) {
+  font-weight: 600;
+  font-size: #{$i}rem;
+
+  @include media.tablet {
+    font-size: #{math.round($i * 0.9)}px;
+  }
+
+  @include media.mobile {
+    font-size: #{math.round($i * 0.8)}px;
+  }
+}
+
+@mixin R-($i) {
+  font-weight: 400;
+  font-size: #{$i}rem;
+
+  @include media.tablet {
+    font-size: #{math.round($i * 0.9)}px;
+  }
+
+  @include media.mobile {
+    font-size: #{math.round($i * 0.8)}px;
+  }
+}

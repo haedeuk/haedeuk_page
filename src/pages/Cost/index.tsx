@@ -1,5 +1,5 @@
-import styles from './Cost.module.scss'
-import { COST_LIST } from "constants/cost";
+import { COST_LIST } from '@/constants/cost';
+import styles from './Cost.module.scss';
 
 export default function Cost() {
   return (
@@ -16,14 +16,14 @@ export default function Cost() {
         </thead>
         <tbody>
           {COST_LIST.map((cost) => (
-          <tr>
+            <tr>
               <td>{cost.category}</td>
-            <td>{cost.name}</td>
-            <td>{cost.price}원</td>
-          </tr>
+              <td>{cost.name}</td>
+              <td>{cost.price}원</td>
+            </tr>
           ))}
         </tbody>
       </table>
     </div>
-  )
+  );
 }

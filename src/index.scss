@@ -1,5 +1,6 @@
-@forward "src/styles/fonts.scss";
-@use "src/utils/styles/mediaQuery" as media;
+@use "@/styles/scrollbar";
+@forward "@/styles/font-face";
+@forward "@/styles/color";
 
 * {
   margin: 0;
@@ -8,30 +9,18 @@
 
 body,
 html {
-  font-family:
-    SUIT,
-    system-ui,
-    "Segoe UI",
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol";
+  font-family: Pretendard, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 10px;
-
 }
 
-button {
-  font-family: SUIT, system-ui;
-}
+html {
+  font-size: 1px;
 
-input {
-  font-family: SUIT, system-ui;
+  @include media.tablet {
+    font-size: 0.9px;
+  }
 
-  &::placeholder {
-    font-family: SUIT, system-ui;
+  @include media.mobile {
+    font-size: 0.8px;
   }
 }
-
