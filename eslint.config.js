@@ -1,11 +1,11 @@
 import js from '@eslint/js';
-import jsxA11y from 'eslint-plugin-jsx-a11y';
-import globals from 'globals';
 import stylisticTs from '@stylistic/eslint-plugin';
 import esImport from 'eslint-plugin-import';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
 import reactPlugin from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
+import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
