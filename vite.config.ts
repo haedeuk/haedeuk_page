@@ -1,5 +1,5 @@
-import { codeInspectorPlugin } from 'code-inspector-plugin';
 import react from '@vitejs/plugin-react';
+import { codeInspectorPlugin } from 'code-inspector-plugin';
 import { defineConfig } from 'vite';
 import checker from 'vite-plugin-checker';
 import vitePluginSvgr from 'vite-plugin-svgr';
