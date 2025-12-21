@@ -1,10 +1,10 @@
-import Doctor1 from '@/assets/image/doctor/doctor1.png';
+// import Doctor1 from '@/assets/image/doctor/doctor1.png';
 import DOCTOR_INFO from '@/constants/doctor_career';
-import useMediaQuery from '@/hooks/useMediaQuery';
+// import useMediaQuery from '@/hooks/useMediaQuery';
 import styles from '../Home.module.scss';
 
 export default function Doctor() {
-  const { isMobile } = useMediaQuery();
+  // const { isMobile } = useMediaQuery();
 
   return (
     <div className={styles.doc}>
@@ -15,7 +15,7 @@ export default function Doctor() {
           <div className={styles.doc__wrap} key={doctor.name}>
             <div className={styles.doc__career}>
               <div className={styles['doc__career--top']}>
-                {isMobile
+                {/* {isMobile
                   ? doctor.rank === '대표원장' &&
                   (
                     <div className={styles.doc__img}>
@@ -28,7 +28,7 @@ export default function Doctor() {
                         <img src={Doctor1} alt="chief" />
                       }
                     </div>
-                  )}
+                  )} */}
                 <div className={styles['doc__career--name']}>
                   {doctor.name}
                   <span className={styles['doc__career--rank']}>
