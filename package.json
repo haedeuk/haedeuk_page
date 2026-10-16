@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "private": true,
+  "packageManager": "yarn@1.22.22",
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
