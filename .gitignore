@@ -15,6 +15,7 @@ tsconfig.tsbuildinfo
 /dist
 # .gitignore
 .pnp.*
+.omc
 .yarn/*
 .yarn/cache/fsevents-*
 !.yarn/cache
